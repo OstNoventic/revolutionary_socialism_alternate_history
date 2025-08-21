@@ -101,9 +101,9 @@ Q.moderate_plan_adopted = 0;
 // organizations
 
 // inter-party relations
-Q.z_relation = 15;
+Q.z_relation = 10;
 Q.kpd_relation = 25;
-Q.ddp_relation = 15;
+Q.ddp_relation = 10;
 Q.dvp_relation = 5;
 // DNVP and NSDAP are invariably hostile
 Q.DNVP_relation = 0;
