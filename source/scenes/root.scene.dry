@@ -102,7 +102,7 @@ Q.moderate_plan_adopted = 0;
 
 // inter-party relations
 Q.z_relation = 10;
-Q.kpd_relation = 25;
+Q.spd_relation = 25;
 Q.ddp_relation = 10;
 Q.dvp_relation = 5;
 // DNVP and NSDAP are invariably hostile
@@ -611,7 +611,7 @@ Q.left_dissent = 30;
 Q.labor_dissent = 25;
 Q.center_dissent = 25;
 Q.z_relation = 41;
-Q.kpd_relation = 16;
+Q.spd_relation = 16;
 Q.dvp_relation = 31;
 Q.budget = 2;
 this.state.disableSaves = true;
