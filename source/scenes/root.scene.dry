@@ -6,7 +6,7 @@ go-to: post_event if started = 1; start_menu if started = 0
 new-page: true
 go-to: start_menu_2
 
-= Social Democracy: An Alternate History
+= Revolutionary Socialism: An Alternate History
 
 @start_menu_2
 
@@ -109,16 +109,16 @@ Q.dvp_relation = 5;
 Q.DNVP_relation = 0;
 Q.NSDAP_relation = 0;
 
-Q.kpd_leader = "Thälmann";
+Q.spd_leader = "Wels";
 // alternative is the Conciliators as party leader
-Q.kpd_party_leader = "Thälmann";
+Q.spd_party_leader = "Wels";
 Q.z_leader = "Brüning";
 // party leader - can be Ludwig Kaas, Joseph Joos, or Adam Stegerwald after the 1928 December conference. Joos will be most friendly to the SPD.
 Q.z_party_leader = "Marx";
 Q.nsdap_leader = "Hitler";
 
 // hmm... maybe we can play nice with Hindenburg???
-Q.hindenburg_relation = 25;
+Q.hindenburg_relation = 0;
 
 
 // Does the SPD lead in Prussia?
@@ -128,7 +128,11 @@ Q.prussian_government = "SPD";
 
 // The array of forces - paramilitary groups
 // Number of members in 1928 (in thousands)
-// Reichsbanner, stahlhelm, SA, rotfrontkämpferbund
+// rotfrontkämpferbund, Reichsbanner, stahlhelm, SA
+Q.rfb_strength = 130;
+Q.rfb_militancy = 0.5;
+Q.rfb_banned = 0;
+Q.rfb_banned_prussia = 0;
 Q.rb_strength = 2000;
 Q.rb_militancy = 0.01;
 Q.women_in_rb = 0;
@@ -141,10 +145,6 @@ Q.sa_strength = 80;
 Q.sa_militancy = 0.5;
 Q.sa_banned = 0;
 Q.sa_banned_prussia = 0;
-Q.rfb_strength = 130;
-Q.rfb_militancy = 0.5;
-Q.rfb_banned = 0;
-Q.rfb_banned_prussia = 0;
 
 Q.interior_police_strength = 50;
 Q.interior_police_militancy = 1;
