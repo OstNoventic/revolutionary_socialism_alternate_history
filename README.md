@@ -1,4 +1,4 @@
-# Social Democracy: An Alternate History
+# Revolutionary Socialism: An Alternate History
 
 ## Included Libraries
 
