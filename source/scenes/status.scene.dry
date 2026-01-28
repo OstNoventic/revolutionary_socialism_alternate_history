@@ -20,12 +20,12 @@ if (Q.economic_growth) {
 
 Resources available: [+ resources +]
 
-SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_weimar_coalition and spd_in_government: Weimar Coalition ?][? if in_grand_coalition and spd_in_government: Grand Coalition ?][? if in_popular_front and spd_in_government: Popular Front ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+KPD position: [? if kpd_toleration : toleration ?][? if kpd_in_government : in government - ?][? if kpd_toleration == 0 and kpd_in_government == 0 and kpd_caretaker == 0 : opposition ?][? if kpd_caretaker : caretaker government ?]
+[? if in_popular_front and kpd_in_government: Popular Front ?][? if in_left_front and kpd_in_government: Left Front ?][? if in_kpd_majority and kpd_in_government: KPD majority ?][? if in_minority_government and kpd_in_government: minority government ?][? if in_emergency_government and kpd_in_government: emergency government ?]
 
-[? if spd_in_government and not in_spd_majority and not in_left_front : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
+[? if kpd_in_government and not in_spd_majority : Coalition dissent: [+ coalition_dissent : coalition_dissent +] ?]
 
-[? if spd_in_government and (in_left_front or in_popular_front): KPD coalition dissent: [+ kpd_coalition_dissent : coalition_dissent +] ?]
+[? if kpd_in_government and (in_left_front or in_popular_front): SPD coalition dissent: [+ spd_coalition_dissent : coalition_dissent +] ?]
 
 Internal dissent: [+ dissent_percent : dissent +]
 
@@ -55,7 +55,7 @@ Reichstag composition:
 # 1928: 9, 1930: 10
 Others: [+ other_r +]%
 
-[? if spd_in_government = 1 : Budget: [+ budget +] ?]
+[? if kpd_in_government = 1 : Budget: [+ budget +] ?]
 
 Next election: [+ next_election_month : month +] [+ next_election_year +]
 
@@ -82,7 +82,7 @@ Economic growth: [+ economic_growth_2 +]%
 
 {!<span class="tooltip-text" title="German People's Party">DVP</span>!}: [+ dvp_relation : relationships +]
 
-{!<span class="tooltip-text" title="Communist Party of Germany">KPD</span>!}: [+ kpd_relation : relationships +]
+{!<span class="tooltip-text" title="Social Democratic Party of Germany">SPD</span>!}: [+ spd_relation : relationships +]
 
 {!<span class="tooltip-text" title="German National People's Party">DNVP</span>!}: [+ dnvp_relation : relationships +]
 
@@ -90,15 +90,17 @@ Economic growth: [+ economic_growth_2 +]%
 
 = Internal Factions of the SPD
 
-{!<span class="tooltip-text" title="The Left is interested in radical, transformative policies and cooperation with the KPD.">Left</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
+[? if councilists > 0 : Councilist strength: [+ councilist_strength : strength +], dissent: [+ councilist_dissent : dissent +] ?]
 
-{!<span class="tooltip-text" title="The Center is a faction of Center Marxists, between reform and revolution.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
+{!<span class="tooltip-text" title="The Left Opposition is interested in radical internationalist policies and cooperation with the KAPD.">Left Opposition</span>!} strength: [+ left_strength : strength +], dissent: [+ left_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Labor's goal is economic reform and benefits for organized workers.">Labor</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
+{!<span class="tooltip-text" title="The Center is a faction of Pro-Stalin Communists, generally supporting the line of the Comintern.">Center</span>!} strength: [+ center_strength : strength +], dissent: [+ center_dissent : dissent +]
 
-{!<span class="tooltip-text" title="Reformists are pragmatic participants in government, and seek to expand the welfare state and defend democracy.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+{!<span class="tooltip-text" title="The Conciliators Goals are cooperation with the SPD against fascism.">Conciliators</span>!} strength: [+ labor_strength : strength +], dissent: [+ labor_dissent : dissent +]
 
-[? if neorevisionism > 0 : Neorevisionist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
+{!<span class="tooltip-text" title="The Right Opposition is in favor of more moderate, national oriented policies, supportive of Bukharin and collaboration with the SPD.">Reformist</span>!} strength: [+ reformist_strength : strength +], dissent: [+ reformist_dissent : dissent +]
+
+[? if socialist > 0 : Socialist strength: [+ neorevisionist_strength : strength +], dissent: [+ neorevisionist_dissent : dissent +] ?]
 
 
 @paramilitaries
