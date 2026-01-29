@@ -5,9 +5,9 @@ card-image: img/portraits/ThälmannErnst.jpg
 view-if: wels_advisor = 1
 new-page: true
 
-= Otto Wels
+= Ernst Thälmann
 
-Wels is the long-time chairman of the SPD. He is a gifted organizer and a member of the centrist faction.
+Thälmann is the chairman of the KPD. He is a gifted organizer and a member of the center faction.
 
 - @clear_agenda
 - @party_discipline
